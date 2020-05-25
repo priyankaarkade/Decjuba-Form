@@ -1,24 +1,51 @@
 import React from 'react';
-import logo from './logo.svg';
+import { useForm } from "react-hook-form";
 import './App.css';
 
-function App() {
+const App = () => {
+    const { handleSubmit, register, errors } = useForm();
+    const onSubmit = values => console.log(values);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="decjuba_form">
+        <div className="gender_perference_form">
+            <h1>BECOME A DECJUBA INSIDER</h1>
+            <p>As an INSIDER, be the first to see our new products, the biggest & best sales + so much MORE! PLUS! Shop with 10% OFF ALWAYS</p>
+            <form>
+                <label><input type="checkbox" /> Women's</label>
+                <label><input type="checkbox" /> Kids</label>
+                <label><input type="checkbox" /> Both</label>
+                <button type="submit">Join Us</button>
+                <label><input type="checkbox"/> I accept Privacy Policy</label>
+            </form>
+        </div>
+
+        <div className="sign_up_form">
+            <h1>YOU'RE AN INSIDER!</h1>
+            <p>your email is on its way so</p>
+            <h2>Let's get personal...</h2>
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <label>First Name</label>
+                <input name="firstname" ref={register({ required: true, maxLength: 20 })} />
+                {errors.firstname && <span>This field is required</span>}
+
+                <label>Last Name</label>
+                <input name="lastname" ref={register({ required: true, maxLength: 20 })} />
+                {errors.lastname && <span>This field is required</span>}
+
+                <label>Country</label>
+                <input name="country" ref={register} />
+
+                <label>D.O.B</label>
+                <input name="dateofbirth" ref={register} />
+
+                <label>Postcode</label>
+                <input name="postcode" ref={register} />
+
+                <button type="submit">Join Us</button>
+                <button type="cancel">No Thanks</button>
+            </form>
+        </div>
     </div>
   );
 }
