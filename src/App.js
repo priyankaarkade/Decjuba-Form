@@ -8,19 +8,19 @@ const App = () => {
 
   return (
     <div className="decjuba_form">
-        <div className="gender_perference_form">
+        <section className="perference">
             <h1>BECOME A DECJUBA INSIDER</h1>
             <p>As an INSIDER, be the first to see our new products, the biggest & best sales + so much MORE! PLUS! Shop with 10% OFF ALWAYS</p>
-            <form>
+            <form className="perference__form">
                 <label><input type="radio" name="womens" /> Women's</label>
                 <label><input type="radio" name="kids"/> Kids</label>
                 <label><input type="radio" name="both" /> Both</label>
-                <button type="submit">Join Us</button>
+                <button>Join Us</button>
                 <label><input type="checkbox" name="privacypolicy"/> I accept Privacy Policy</label>
             </form>
-        </div>
+        </section>
 
-        <div className="sign_up_form">
+        <section className="sign_up">
             <h1>YOU'RE AN INSIDER!</h1>
             <p>your email is on its way so</p>
             <h2>Let's get personal...</h2>
@@ -45,7 +45,7 @@ const App = () => {
                 <button type="submit">Join Us</button>
                 <button type="cancel">No Thanks</button>
             </form>
-        </div>
+        </section>
     </div>
   );
 }

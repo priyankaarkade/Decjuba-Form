@@ -2,11 +2,15 @@
   text-align: center;
 }
 
-.sign_up_form, .gender_perference_form {
+.sign_up, .perference {
   display: flex;
   flex-direction: column;
   width: 20%;
   margin: 0 auto;
+}
+
+.perference__form {
+  text-align: center;
 }
 
 form {
@@ -17,4 +21,5 @@ form {
 
 button {
   width: 30%;
+  margin: 0 auto;
 }
