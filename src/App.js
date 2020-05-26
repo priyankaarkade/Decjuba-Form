@@ -1,5 +1,5 @@
 import React from 'react';
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form';
 import './App.css';
 
 const App = () => {
@@ -12,11 +12,11 @@ const App = () => {
             <h1>BECOME A DECJUBA INSIDER</h1>
             <p>As an INSIDER, be the first to see our new products, the biggest & best sales + so much MORE! PLUS! Shop with 10% OFF ALWAYS</p>
             <form>
-                <label><input type="checkbox" /> Women's</label>
-                <label><input type="checkbox" /> Kids</label>
-                <label><input type="checkbox" /> Both</label>
+                <label><input type="radio" name="womens" /> Women's</label>
+                <label><input type="radio" name="kids"/> Kids</label>
+                <label><input type="radio" name="both" /> Both</label>
                 <button type="submit">Join Us</button>
-                <label><input type="checkbox"/> I accept Privacy Policy</label>
+                <label><input type="checkbox" name="privacypolicy"/> I accept Privacy Policy</label>
             </form>
         </div>
 
